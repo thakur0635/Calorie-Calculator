@@ -8,7 +8,7 @@ let App = ()=>{
   const [q, setq] = useState('chicken');
    const[recipies,setrecipies]= useState([]);
    useEffect(()=>{
-     getrecipies();
+     getrecipies(); //eslint-disable-next-line
    },[q])
    let getrecipies = async ()=>{
      const response = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${q}&app_id=0c2729d4&app_key=47ee5a420cb7421ba296182f37650db6`);
